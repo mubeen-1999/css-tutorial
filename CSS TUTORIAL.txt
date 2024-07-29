@@ -1,0 +1,460 @@
+======================== CSS TUTORIAL =============================
+
+INLINE TAG:
+
+<h1 style="color: green;">Hello from Mubeen</h1>
+
+STYLE TAG:
+
+ <style>
+        h1{
+            color: red;
+        }
+    </style>
+
+EXTERNAL STYLESHEET:
+	make a new file of css and link it with html file.
+
+GOOGLE COLOR PICKER:
+	1) search color picker on google to values of color in RGB and Hex
+	2) search color pallete click coolors.co for colors
+
+ID :
+	<h1 id="heading1"> this is Heading1</h1>
+    <h1 id="heading2" >this is Heading2</h1>
+    <h1 id="heading3">this isHeading3</h1>
+
+Id same nhi honi chahiye 
+
+CLASS :
+
+	<h1 class="myclass">this isHeading3</h1>
+    <p class="myclass">this is paragraph</p>
+
+class ka naam same ho skta hai 
+
+* style tag or style.css mein uski baat suni jaati hai jo head tag mein baad mein likha jata hai 
+*inline style ki priority sub se zyada hogi
+---------------------------------------------------------------------------------------------------------------
+
+PADDING : 
+	Extra space around the content
+
+padding properties in short : padding: top right bottom left 
+-------------------------------------------------------------------------------------------------------------
+BORDER :
+	Space around the content and padding -- content = heading, paragraph , div etc
+	3 major properties of border
+	1) border width
+	2) border style
+	3) border color
+
+border properties in short : border: width style color;
+
+*To create a circle make a div goto css make height and width 100px than make border-radius 50%
+* in inspect blue area is content, orange area is margin and green area is padding 
+------------------------------------------------------------------------------------------------------------
+MARGIN : 
+	Space b/w two boxes/content
+
+margin properties in short : margin: top right bottom left
+
+========================================MAKING TRAFFIC SIGNAL================================
+
+<body>
+ 
+    <div id="rect">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+</body>
+
+#rect{
+    height: 300px;
+    width: 120px;
+    background-color: rgb(41, 40, 40);
+    margin: 10px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+}
+#red{
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 20px;
+}
+#yellow{
+    height: 70px;
+    width: 70px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 20px;
+}
+#green{
+    height: 70px;
+    width: 70px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+--------------------------------------------------------------------------------------------------------------------
+
+========================================MAKING A NAVBAR=======================================
+
+"*"-- THIS IS UNIVERSAL 
+set universal padding and margin to 0 in css ,na bhi karein to chalay ga but it's a good approach
+
+<body>
+    
+    <div id="navbar">
+            <a id="logo">amazon.in</a>
+            <a href="#">Account</a>
+            <a href="#">My Cart</a>
+            <a href="#">Contact Us</a>
+            <input placeholder="search Amazon.in">
+            <button>search</button>
+            
+    </div>
+</body>
+
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+#navbar{
+    height: 60px;
+    background-color: #0f1111;
+}
+button{
+    background-color: #f08804;
+}
+#logo{
+    color:  #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+DISPLAY PROPERTY :
+		
+--------------------------------------------------------------------------------------------------------------
+													     |
+VISIBILITY PROPERTY :											     |
+
+-------------------------------------------------------------------------------------------------------------
+
+ALPHA CHANNEL :
+
+In RGBA value of alpha is set from 0 to 1
+
+--------------------------------------------------------------------------------------------------------------
+
+POSITION PROPERTY :
+		position : static/relative/absolute/fixed/sticky
+
+		static k sath top,bottom,left,right and z-index ye sub kaam nhi krte 
+
+		relative matlab relative to itself
+
+		absolute matlab relative to the parent or nearly positioned parent
+
+		fixed matlab relative to the browser window
+#box1{
+    position: static;
+}
+#box2{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+#box3{
+    position: absolute;
+    top: 500px; 
+}
+#box4{
+    position: fixed;
+    top: 50px;
+    z-index: -2;
+}
+
+---------------------------------------------------------------------------------------------------------
+============================================BACKGROUND IMAGE=============================================
+
+unsplash.com : To download free images
+
+background-size : cover/contain/auto
+
+		cover : pic will be completely fit and no space
+		#box1{
+		    background-image: url("car.jpg");
+		    background-size: cover;
+		}
+
+*mostly we use cover and not contain and auto
+--------------------------------------------------------------------------------------------------------------
+
+===============================================FLEX BOX=======================================================
+
+It is 1 dimensional layout method for arranging items in rows or columns
+
+FLEX DIRECTION :
+		flex-direction : row; (L to R)
+		flex-direction : row-reverse; (R to L)
+		flex-direction : column; (Top to Bottom)
+		flex-direction : column-reverse; (Bottom to top)
+
+#container{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+	 /* align-content: flex-start; */
+}
+
+  #box2{
+    background-color: pink;
+    height: 200px;
+    flex-grow: 1;
+}
+
+
+===========================================PRACTICE SET=================================================
+
+                       MAKING A NAVBAR WITH LIST USING FLEX PROPERTY
+QUESTION # 1:
+
+<body>
+     <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About US</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Help</a></li>
+     </ul>
+    
+</body>
+
+ul{
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+}
+li{
+    list-style-type: none;
+    display: inline;
+}
+		
+QUESTION # 2: USE FELXBOX TO CENTER ONE DIV INSIDE ANOTHER DIV ??
+
+display : flex;              --> to use flex box ---->  cheezon ko same line mein lanay k liye 
+justify-content : center;    --> to allign horizontally
+align-items: center;         --> to allign vertically
+
+<div class="outer">
+      <div class="inner"></div>
+     </div>
+    
+.outer{
+    height: 400px;
+    width: 400px;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.inner{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(191, 85, 237);
+    
+}
+
+------------------------------------------------------------------------------------------------------
+
+========================================MEDIA QUERIES===============================================
+
+media quriWs help to create a responsive website
+
+<body>
+    <div></div>
+</body>
+
+
+div{
+    height: 50px;
+    width: 50px;
+   
+}
+@media(max-width : 300px){
+    div{
+        background-color: green;
+    }
+}
+@media(min-width : 600px){
+    div{
+        background-color: blue;
+    }
+}
+@media(min-width : 300px) and (max-width : 400px){
+    div{
+        background-color: pink;
+    }
+}
+@media(min-width : 400px) and (max-width : 600px){
+    div{
+        background-color: red;
+    }
+}
+
+------------------------------------------------------------------------------------------------------
+
+=====================================TRANSITIONS=============================================
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    transition-property: all;
+    transition-duration: 2s; 
+    transition-timing-function: steps(5);
+     
+}
+
+---------------------------------------------------------------------------------------------------------
+
+===========================================TRANSFORM=====================================================
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    position: absolute;
+    top: 100px;
+    left: 100px; 
+    transform: rotate(45deg); ---> div ko 45 deg rotate kr dega
+    transform: scale(2);     -----> jo div ka size hai uska double krdega
+    transform: scale(1,2); ---> x axis k liye same but yaxis k liye double ho jaye ga
+    
+}
+div:hover{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    /* transform: rotate(360deg); */
+    transform: translate(250px); -----> hover krne pr box ko 250px move karay ga
+    transform: skew(30deg); ----> hover krne pr box ko dono corner se kheenchay ga 
+}
+
+----------------------------------------------------------------------------------------------------
+
+=====================================ANIMATIONS===============================================
+
+ANIMATION TEMPLATE
+
+@keyframe myName {
+		    from {font-size: 20px;}
+		    to {font-size: 40px;}
+		}
+
+to apply animation write its code by using properties
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    position: absolute;
+    top: 100px;
+    left: 100px; 
+    animation-name: coloranimate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation: coloranimate 3s ease-in 0s infinite alternate;
+}
+
+
+% IN ANIMATION : 
+
+		@keyframes coloranimate {
+    0% {
+        left : 0px;
+        background-color: aqua;
+    
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        left : 200px;
+        background-color: rgb(244, 1, 1);
+        
+    }
+
+-----------------------------------------------------------------------------------------------------------
+
+================================PRACTICE SET 8=============================================
+
+Q) CREATE A SIMPLE LOADER USING CSS ?
+
+		
+.loader{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px solid #f4f007;
+    border-top: 10px solid #ff9900;
+    /* transform: rotate(360deg);
+    transition-property: all;
+    transition-duration: 2s; 
+    transition-timing-function: steps(5);
+    transition-delay: 1s; */
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+===========================================CSS PROJECT ==============================================
+
+to use icons you have to link the website (fontawesome.com) for that :
+
+- search cdnjs on google
+- goto fontawesome 
+- copy the link tag 
+- paste it on your html file above the link of style.css
+
+
